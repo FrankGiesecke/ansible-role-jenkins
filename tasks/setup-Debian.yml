@@ -20,7 +20,8 @@
     state: present
     update_cache: true
   when: >
-    jenkins_repo_url is definedand
+    jenkins_repo_url is defined
+    and
     jenkins_repo_url | length > 0
   tags: ['skip_ansible_lint']
 
